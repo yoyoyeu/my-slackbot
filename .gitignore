@@ -1,3 +1,7 @@
+ignore.rb
+slappy_config.rb
+nohup.out
+
 *.gem
 *.rbc
 /.config
