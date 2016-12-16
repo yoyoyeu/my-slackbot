@@ -14,7 +14,7 @@ hear '^aikatsup' do |event|
   else
 
     # json データの取得
-    key = key.sprit.join('+')
+    key = key.split.join('+')
     url = URI.escape('http://aikatsup.com/api/v1/search?words=' + key)
     data = {}
     open(url) do |i|
