@@ -3,6 +3,6 @@ AikatsUP の API http://aikatsup.com/about/ を使って、セリフ検索でひ
 
 たとえば
 
->>> aikatsup 「オケオケオッケー」
+> aikatsup 「オケオケオッケー」
 
 などのように使います。
