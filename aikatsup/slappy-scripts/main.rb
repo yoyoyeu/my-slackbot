@@ -26,7 +26,9 @@ hear '^aikatsup' do |event|
       say 'エラーです。たぶん画像がひとつもみつかりませんでした。', channel: event.channel
     else
       num = data['item'].size
-      say data['item'][rand(num)]['image']['url'], channel: event.channel
+      imgurl = data['item'][rand(num)]['image']['url']
+      timestamp = Time.now.to_i
+      say imgurl + '?' + timestamp.to_s, channel: event.channel
     end
   end
 end
