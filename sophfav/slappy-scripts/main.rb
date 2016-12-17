@@ -12,9 +12,9 @@ hello do
 end
 
 schedule '*/4 * * * *' do
-  # puts "check new favs ..."
+  puts "check new favs ... (#{Time.now})"
   newtw = select_new_tweets(favs(), @favstock)
-  # puts "nothing new" if newtw.empty?
+  puts "nothing new" if newtw.empty?
   newtw.reverse_each do |t|
     puts saying(t)
     say saying(t), channel: @channel
