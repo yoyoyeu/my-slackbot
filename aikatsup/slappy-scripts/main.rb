@@ -7,7 +7,7 @@ hello do
   puts 'successfly connected'
 end
 
-hear /^[@]*aikatsup/ do |event|
+hear BOT_REGEXP do |event|
   key = event.text[/「(.*)」/, 1]
   if key.nil? || key == ''
     say '"aikatsup" のあとに「」でセリフを指定してね', channel: event.channel
